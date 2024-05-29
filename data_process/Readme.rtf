@@ -1,0 +1,22 @@
+{\rtf1\ansi\ansicpg932\cocoartf2761
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 File structure\
+\
+\{expid\} folders were assumed to contain demultiplex fastq files from each sequence run, separately.\
+\
+Below the \{expid\} folders, \'93Fungi\'94 and \'93Plant\'94 folders contain following bioinformatics analysis. \
+(adapter trimming (cutadapt) ->  filtering & trimming (DADA2) -> Denoising (DADA2))\
+\
+## above files were empty in GitHub repository, you cat get demultiplex fastq files from DDBJ\
+\
+Denoising results of multiple runs were gathered in the folders \'93Raw_data/Fungi\'94 & \'93Raw_data/Plant\'94\
+\
+The multiple run result were merged & OTU covert in 231007_sample_process.R \
+\
+Taxonomy annotation of each OTU were conducted in dada2_annotation.R (Fungi) or  x_nn_BLAST.sh (Plant)\
+}
