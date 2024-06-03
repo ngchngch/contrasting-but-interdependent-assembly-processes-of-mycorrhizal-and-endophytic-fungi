@@ -23,35 +23,51 @@ Hirokazu Toju: toju.hirokazu.4c@kyoto-u.ac.jp
 DOI: https://biorxiv.org/cgi/content/short/2024.02.17.580831v1
 
 # Content
+
+## data_process
+
 at first, demultiplexed fastq files were convert to sample-OTU matrix & OTU taxonomy annotation information in data_process (script in data_process/script)
 
+## analysis
 the processed data were analyzed in anlysis (script in analysis/script)
+
+## function
 
 Original functions in function
 
+## Output
+
 Some output of analyses are in Output
-##Fungal OTU-sample matrix
-#sequance similarity threshold: 93%
+
+-Fungal OTU-sample matrix
+--sequance similarity threshold: 93%
+
 Output/Fungi/seqOTUtab_93.rds
-#sequance similarity threshold: 97%
+
+--sequance similarity threshold: 97%
+
 Output/Fungi/seqOTUtab_97.rds
 
-##Plant OTU-sample matrix
+-Plant OTU-sample matrix
+
 Output/Plant/seqOTUtab.rds
 
-##Fungal OTU taxonomy annotation with manual modified guild information
+-Fungal OTU taxonomy annotation with manual modified guild information
+
 Output/Fungi/taxa_list_mod.csv
 
-##Plant OTU taxonomy annotation
+-Plant OTU taxonomy annotation
+
 Output/Plant/OTUseq_0.97.5nn.tsv
 
-##sample information with root plant annotation
-Output/sample_information/comp_sample_info.csv
+-sample information with root plant annotation
 
+Output/sample_information/comp_sample_info.csv
 
 Metadata in Raw_data/metadata
 
-In detail, 
+
+# Analysis procedure 
 
 ######################################################################
 
