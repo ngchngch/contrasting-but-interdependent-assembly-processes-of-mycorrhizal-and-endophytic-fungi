@@ -76,23 +76,23 @@ Metadata in Raw_data/metadata
 
 ############ processed by each run ###################################
 
-##adaptor trimming 
+### adaptor trimming 
 #Fungi
 script02_Cutadaptor_ITS_3p62plF1_ITS_4unR1.sh
 #Plant
 script02_Cutadaptor_ITS1F-Kyo1_ITS2-KYO2.sh
 
-##Filtering & Trimming by dada2
+### Filtering & Trimming by dada2
 script03_FilterTrimming.sh
 
-##Denoiding by dada2
+### Denoiding by dada2
 script04_Denoising.sh
 
 #######################################################################
-## Decontamination > Merge run data > OTU clustering
+### Decontamination > Merge run data > OTU clustering
 231007_sample_process.R
 
-## Taxonomy annotation
+### Taxonomy annotation
 #Fungi 
 dada2_annotation.R
 #Plant
@@ -104,46 +104,46 @@ x_nn_BLAST.sh
 @@below scripts are in anlysis/script
 
 #######################################################################
-###analysis_00_data_process
+## analysis_00_data_process
 
-##pick_up vividplantea sequence for MEGA
+### pick_up vividplantea sequence for MEGA
 0_01_plant_seq_extract.R
 #MEGA phylogenetic tree & BLAST search > relurt in 01_extract_pseq/Manual/Plant_seq_in_ITS1_BLAST.csv
 
-##Root plant anotation
+### Root plant anotation
 0_02_root_plant_annotation.R
 
-##separate samples by root vs soil
+### separate samples by root vs soil
 0_03_No_rarefy_merge_seqtab.R
 
-##covarage-based rarefaction
+### covarage-based rarefaction
 0_04_covrarefy.R
 
-##make sample information with root plant
+### make sample information with root plant
 0_05_make_sample_info.R
 
-##Guild annotation
+### Guild annotation
 0_06_make_guild_table.R
 #manual modified guild annotation in 06_Guild_annotation/Manual/Changed_Unique_genus_guild_for_manual_check.csv
 
-##manual guild correction
+### manual guild correction
 0_07_guild_modified.R
 
-###analysis_01_basic description
+## analysis_01_basic description
 
-##rarefaction & species acumulation cureve
+### rarefaction & species acumulation cureve
 1_01_rarefaction_curve.R
 
-##Barplot
+### Barplot
 1_02_barplot.R
 
 
-###analysis_02_joint species distribution modeling
+## analysis_02_joint species distribution modeling
 
-##prepare files for jsdm in google colab
+### prepare files for jsdm in google colab
 2_01_prep_jsdm_files.R
 
-##jSDM
+### jSDM
 #parametor fitting & model comparison in google Colab
 2_sjSDM.ipynb
 
@@ -156,10 +156,10 @@ x_nn_BLAST.sh
 2_03_jsdm_loglikeratio_comp_OTU97.R
 2_03_jsdm_loglikeratio_comp_OTU93.R
 
-###additional analysis each factor
+## additional analysis each factor
 ##in this section, only OTU 0.97 data were used
 
-##Mantel correlogram
+### Mantel correlogram
 #whole fungal community
 3_01_mantel_all.R
 
@@ -174,17 +174,17 @@ x_nn_BLAST.sh
 #drow mantel correlogram panels
 3_02_mantel_plot.R
 
-##Host preference
+### Host preference
 #calculate preference
 3_03_2dp_dprime_randamize.R
 
 #graphics
 3_04_plot_preference_heatmap.R
 
-##Habitat preference
+### Habitat preference
 3_05_Habitat_preference_root_soil.R
 
-###co-occurrence network
+### co-occurrence network
 #co-occurence inference by SPIECEASI
 4_01_conet_SLR
 
